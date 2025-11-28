@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next@latest"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "pages/api/**/*.tsx": {
+      "runtime": "nodejs20.x"
+    },
+    "app/api/**/*.ts": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}
